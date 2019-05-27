@@ -1,10 +1,12 @@
 package com.regrassion;
 
-import base.CommonAPI;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-public class EbaySigninPage extends CommonAPI {
+import pageBase.PageBase;
+
+public class EbaySigninPage extends PageBase {
 
 @FindBy(linkText = "Sign in")
 WebElement SighInTab;

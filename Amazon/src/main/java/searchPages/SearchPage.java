@@ -2,7 +2,6 @@ package searchPages;
 
 
 import base.CommonAPI;
-;
 import dataSource.DatabaseOperation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -44,7 +43,7 @@ public class SearchPage{
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getSearchInputWebElement().clear();
     }
-    public void searchItemsAndSubmitButton()throws Exception, IOException, SQLException, ClassNotFoundException  {
+    public void searchItemsAndSubmitButton()throws Exception{
         DatabaseOperation databaseOperation = new DatabaseOperation();
         List<String> list = databaseOperation.getItemsListFromDB();
         for(int i=0; i<list.size(); i++) {
@@ -53,7 +52,7 @@ public class SearchPage{
             clearInput();
         }
     }
-    public void searchItemsFromArrayListAndSubmitButton()throws Exception, IOException, SQLException, ClassNotFoundException  {
+    public void searchItemsFromArrayListAndSubmitButton()throws Exception{
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         DatabaseOperation databaseOperation = new DatabaseOperation();
         List<String> list = databaseOperation.getItemValue();
@@ -63,7 +62,7 @@ public class SearchPage{
             clearInput();
         }
     }
-    public void searchItemsAndSubmitButtonFromExcelFile()throws Exception, IOException, SQLException, ClassNotFoundException  {
+    public void searchItemsAndSubmitButtonFromExcelFile()throws Exception{
         // ToDo
         //Read data from Excel file using Apache POI
         List<String> list = null;
@@ -79,7 +78,7 @@ public class SearchPage{
     }
 
     public void setSearchInputField(WebElement searchInputField) {
-        this.searchInputWebElement = searchInputField;
+        searchInputWebElement = searchInputField;
     }
 
     public void searchItems()throws InterruptedException{

@@ -34,13 +34,13 @@ public class DatabaseOperation {
         return itemsList;
     }
 
-    public List<String> getItemsListFromDB()throws Exception, IOException, SQLException, ClassNotFoundException {
+    public List<String> getItemsListFromDB()throws Exception{
         List<String> list = new ArrayList<>();
         list = connectToSqlDB.readDataBase("ItemList", "items");
         return list;
     }
 
-    public static void main(String[] args)throws Exception, IOException, SQLException, ClassNotFoundException {
+    public static void main(String[] args)throws Exception{
         //insertDataIntoDB();
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
         List<String> list = connectToSqlDB.readDataBase("ItemList","items");

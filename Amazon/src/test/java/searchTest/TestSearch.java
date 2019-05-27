@@ -12,14 +12,14 @@ import java.sql.SQLException;
 public class TestSearch extends CommonAPI {
 
     @Test
-    public void searchItemsOnAmazonSearchBox()throws Exception, IOException, SQLException, ClassNotFoundException {
+    public void searchItemsOnAmazonSearchBox()throws Exception{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         SearchPage searchPage = PageFactory.initElements(driver, SearchPage.class);
         searchPage.searchItemsFromArrayListAndSubmitButton();
     }
 
     @Test
-    public void searchItemsFromDB()throws Exception, IOException, SQLException, ClassNotFoundException {
+    public void searchItemsFromDB()throws Exception{
         SearchPage searchPage = PageFactory.initElements(driver, SearchPage.class);
         searchPage.searchItemsFromArrayListAndSubmitButton();
     }

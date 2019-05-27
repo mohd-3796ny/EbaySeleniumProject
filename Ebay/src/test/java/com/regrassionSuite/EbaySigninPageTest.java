@@ -1,43 +1,46 @@
 package com.regrassionSuite;
 
+
 import com.regrassion.EbaySigninPage;
+import org.junit.Before;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageBase.PageBase;
 
-public class EbaySigninPageTest extends EbaySigninPage {
-    EbaySigninPage objOfSigninPage = null;
-"com.regrassionSuite.EbaySigninPageTest
-//    private Iterable<?> tittle;
-//    private Object signinPage;
+import java.util.concurrent.TimeUnit;
+
+public class EbaySigninPageTest extends PageBase {
+
+    private Object EbaySigninPageTest;
 
     @BeforeMethod
-public void initializationOfElements(){objOfSigninPage = PageFactory.initElements ( driver,EbaySigninPage.class );}
 
 
-////@Test
-////public void EbayImageTest(){
-////        boolean flag = SigninPage.equals ( "EbayImage" );
-////        Assert.assertTrue ( flag );
-////    }
-//
-//@Test
-//public void signinPageTest(){
-//    objOfSigninPage.
-//
-////}
-////
-////@AfterMethod
-////    public void tearDown(){
-////driver.quit ();
-////}
-
-
-    @Test
-    public void SignInBox(){
-        objOfSigninPage.SignInBox();
-        System.out.println("Invalid Password");
-
+public void init(){
+EbaySigninPageTest = PageFactory.initElements ( driver,EbaySigninPageTest.class );
+driver.getCurrentUrl ();
     }
+        @Test
+        public void setEbaySigninPageTest(){
+            clickOnElement ( "SighInTab" );
+        }
 
-}
+        @Test
+
+         public void userNameFieldTest(){
+
+         clickOnElement ( "UserNameField" );
+
+
+        }
+
+                @Test
+            public void PasswordFieldTest() {
+               clickOnElement ( "password" );
+            }
+
+
+
+        }

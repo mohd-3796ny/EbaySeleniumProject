@@ -1,6 +1,6 @@
 package databases;
 
-import ch.qos.logback.classic.Logger;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
@@ -8,23 +8,19 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
-import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.LoggerContext;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class ConnectToMongoDB {
 
     public static MongoDatabase mongoDatabase = null;
+    private static Object LoggerFactory;
 
     public static MongoDatabase connectToMongoDB() {
-
-        LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-        Logger rootLogger = loggerContext.getLogger("org.mongodb.driver");
-        rootLogger.setLevel(Level.OFF);
+//
+//        LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
+//        Logger rootLogger = loggerContext.getLogger("org.mongodb.driver");
+//        rootLogger.setLevel(Level.OFF);
 
 
         MongoClient mongoClient = new MongoClient();
